@@ -2,7 +2,11 @@
 
 **Alumne:** Marc Cedó Bueno  
 **Curs:** DAM2B 26/27  
-**Professors:** Gerard Porto i Oriol Carro  
+**Professors:** Gerard Porto i Oriol Carro
+
+[← Tornar enrere](../README.md)
+
+---
 
 ## Índex RA
 
