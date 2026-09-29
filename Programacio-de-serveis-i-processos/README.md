@@ -4,6 +4,10 @@
 **Curs:** DAM2B 26/27  
 **Professors:** Stéphane Salaet i Gerard Porto
 
+[← Tornar enrere](../README.md)
+
+---
+
 ## Índex RA
 
 | RA | Descripció |
