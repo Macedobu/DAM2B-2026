@@ -1,5 +1,3 @@
-package com.mycompany.pt3;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -71,10 +69,34 @@ public class Programa {
         }
     }
     
+    // ---------- Mètodes per gestionar errors amb int i double ----------
+    private static int llegirEnter(Scanner sc, String missatge) {
+        while (true) {
+            System.out.print(missatge);
+            String input = sc.nextLine().trim();
+            try {
+                return Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Error. Has d'introduir un numero enter valid.");
+            }
+        }
+    }
+    
+    private static double llegirDouble(Scanner sc, String missatge) {
+        while (true) {
+            System.out.print(missatge);
+            String input = sc.nextLine().trim().replace(',', '.');
+            try {
+                return Double.parseDouble(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Error. Has d'introduir un numero decimal valid. (ex: 19,99 / 19.99).");
+            }
+        }
+    }
+    
     // ---------- Mètodes del programa ----------
     
     private static int menu (Scanner sc) {
-        int opcio = 0;
         System.out.println("\n--- Menu ---");
         System.out.println("1. Afegir videojoc");
         System.out.println("2. Llistar tots els videojocs");
@@ -83,33 +105,26 @@ public class Programa {
         System.out.println("5. Eliminar un videojoc");
         System.out.println("6. Sortir del programa");
         System.out.println("------------");
-        System.out.print("Tria una opcio: ");
         
-        opcio = sc.nextInt();
-        sc.nextLine(); // netejar buffer
-        return opcio;
+        return llegirEnter(sc, "Tria una opcio: ");
     }
     
     // 1. Afegir videojoc
     private static void afegirVideojoc(Scanner sc, ArrayList<Videojoc> videojocs) {
         System.out.println("\n--- Afegir nou videojoc ---");
         
-        System.out.println("Titol: ");
+        System.out.print("Titol: ");
         String titol = sc.nextLine();
         
-        System.out.println("Genere: ");
+        System.out.print("Genere: ");
         String genere = sc.nextLine();
         
-        System.out.print("Any de llançament: ");
-        int any = sc.nextInt();
-        sc.nextLine(); // Netejar el buffer 
+        int any = llegirEnter(sc, "Any de llancament: ");
     
         System.out.print("Plataforma: ");
         String plataforma = sc.nextLine();
     
-        System.out.print("Preu: ");
-        double preu = sc.nextDouble();
-        sc.nextLine(); // Netejar el buffer
+        double preu = llegirDouble(sc, "Preu: ");
         
         // Instanciem nou objecte
         Videojoc nouVideojoc = new Videojoc(titol, genere, any, plataforma, preu);
@@ -120,7 +135,7 @@ public class Programa {
         // Guardem la llista actualitzada al fitxer
         desarVideojocs(videojocs);
         
-        System.out.println("Videojoc afegit i desat correctament");
+        System.out.println("Videojoc afegit i desat correctament.");
     }
     
     // 2. Llistar tots els videojocs
@@ -181,9 +196,7 @@ public class Programa {
         }
         
         // Demanem el num. del joc a modificar
-        System.out.println("\nIntrodueix el numero del videojoc a modificar: ");
-        int num = sc.nextInt() - 1; // L'array comença amb 0, restem 1 unitat al num que posi usuari
-        sc.nextLine(); // Netejem buffer
+        int num = llegirEnter(sc, "\nIntrodueix el numero del videojoc a modificar: ") - 1; // L'array comença amb 0, restem 1 unitat al num que posi usuari
         
         // Validem que el numero de l'index existeix a la llista
         if (num < 0 || num >= videojocs.size()) {
@@ -195,27 +208,23 @@ public class Programa {
         System.out.println("\n--- Modificant: " + v.getTitol() + " ---");
         
         //Demanem noves dades i fem servir els setters
-        System.out.println("Nou titol: ");
+        System.out.print("Nou titol: ");
         v.setTitol(sc.nextLine());
         
-        System.out.println("Nou genere: ");
+        System.out.print("Nou genere: ");
         v.setGenere(sc.nextLine());
         
-        System.out.println("Nou any de llançament: ");
-        v.setAnyLlançament(sc.nextInt());
-        sc.nextLine(); // Netejem buffer
+        v.setAnyLlancament(llegirEnter(sc, "Nou any de llancament: "));
         
-        System.out.println("Nova plataforma: ");
+        System.out.print("Nova plataforma: ");
         v.setPlataforma(sc.nextLine());
         
-        System.out.println("Nou preu: ");
-        v.setPreu(sc.nextDouble());
-        sc.nextLine(); // Netejem buffer
+        v.setPreu(llegirDouble(sc, "Nou preu: "));
         
         // Guardem la llista actualitzada al fitxer
         desarVideojocs(videojocs);
         
-        System.out.println("Videojoc actualitzat i desat correctament");
+        System.out.println("Videojoc actualitzat i desat correctament.");
     }
     
     // 5. Eliminar un videojoc
@@ -232,9 +241,7 @@ public class Programa {
         }
         
         // Demanem el num. del joc a modificar
-        System.out.println("\nIntrodueix el numero del videojoc a eliminar: ");
-        int num = sc.nextInt() - 1; // L'array comença amb 0, restem 1 unitat al num que posi usuari
-        sc.nextLine(); // Netejem buffer
+        int num = llegirEnter(sc, "\nIntrodueix el numero del videojoc a eliminar: ") - 1; // L'array comença amb 0, restem 1 unitat al num que posi usuari
         
         // Validem que el numero de l'index existeix a la llista
         if (num < 0 || num >= videojocs.size()) {
@@ -246,6 +253,6 @@ public class Programa {
         videojocs.remove(num);
         desarVideojocs(videojocs);
         
-        System.out.println("Videojoc eliminat correctament");
+        System.out.println("Videojoc eliminat correctament.");
     }
 }

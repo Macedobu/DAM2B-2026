@@ -1,5 +1,3 @@
-package com.mycompany.pt3;
-
 import java.io.*;
 
 class Videojoc implements Serializable {
@@ -37,12 +35,12 @@ class Videojoc implements Serializable {
         this.genere = genere;
     }
 
-    public int getAnyLlançament() {
+    public int getAnyLlancament() {
         return anyLlancament;
     }
 
-    public void setAnyLlançament(int anyLlançament) {
-        this.anyLlancament = anyLlançament;
+    public void setAnyLlancament(int anyLlancament) {
+        this.anyLlancament = anyLlancament;
     }
 
     public String getPlataforma() {
@@ -64,8 +62,8 @@ class Videojoc implements Serializable {
     @Override
     public String toString() {
         return "Titol: " + titol
-                + "\nGènere: " + genere
-                + "\nAny Llançament: " + anyLlancament
+                + "\nGenere: " + genere
+                + "\nAny Llancament: " + anyLlancament
                 + "\nPlataforma: " + plataforma
                 + "\nPreu: " + preu;
     }
