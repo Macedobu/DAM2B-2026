@@ -1,0 +1,5 @@
+Optatiu:
+
+Demostra la proposició del document d'introducció a l'aritmètica modular.
+
+-------------------------

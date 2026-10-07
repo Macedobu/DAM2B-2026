@@ -1,0 +1,76 @@
+4. Troba tots els valors de x entre 0 i m − 1 que siguin solucions de les congruències següents.
+(Pista: si no trobes una manera enginyosa de trobar les solucions, simplement pots substituir cada valor x = 1, x = 2, ..., x = m − 1 i comprovar quins funcionen.)
+
+a) x + 17 ≡ 23 (mod 37).
+
+- Aïllem x:
+x ≡ 23 - 17 (mod 37)
+x ≡ 6 (mod 37)
+
+- Comprovació rang 0 - (m - 1)
+6 ja és dins d'aquest interval. x = 6
+
+- Comprovació (a = m * q + r)
+A l'equació original substituïm x = 6:
+6 + 17 = 23
+Apliquem divisió per veure si 23 ≡ 23 (mod 37):
+23 // 37 = 0
+37 * 0 = 0
+23 - 0 = 23
+23 ≡ 23
+
+Solució única entre 0 i 36 és x = 6
+
+----
+
+b) x + 42 ≡ 19 (mod 51).
+
+- Aïllem x:
+x ≡ 19 - 42 (mod 51)
+x ≡ -23 (mod 51)
+
+- Comprovació rang 0 - 50
+El resultat -23 és negatiu i és fora del rang, per tant hem de sumar-li el mòdul els cops que faci falta per a q sigui positiu
+-23 + 51 = 28
+
+- Comprovació (a = m * q + r)
+A l'equació original substituïm x = 28:
+28 + 42 = 70
+Apliquem divisió per veure si 70 ≡ 19 (mod 51):
+70 // 51 = 1
+51 * 1 = 51
+70 - 51 = 19
+19 ≡ 19
+
+Solució única entre 0 i 50 és x = 28
+
+----
+
+c) x² ≡ 3 (mod 11).
+
+- Possibles valors de x:
+1, 2, 3, 4, ..., 10
+- Calcul del residu de cada x² ((x*x)%11). I sel·leccionar tots els resultats que siguin = 3
+5² % 11 = ?
+25 // 11 = 2
+11 * 2 = 22
+25 - 22 = 3
+5² % 11 = 3
+
+6² % 11 = ?
+36 // 11 = 3
+11 * 3 = 33
+36 - 33 = 3
+6² % 11 = 3
+
+Solucions possibles entre 0 i 10 són x = 5 i x = 6
+
+----
+
+d) x² ≡ 2 (mod 13).
+
+----
+
+e) x² ≡ 1 (mod 8).
+
+-------------------------

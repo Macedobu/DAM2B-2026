@@ -1,36 +1,66 @@
 2. Troba les taules de sumar i multiplicar de Z/5Z
 
+ ------------------------    ------------------------ 
+| + || 0 | 1 | 2 | 3 | 4 |  | * || 0 | 1 | 2 | 3 | 4 |  
+|------------------------|  |------------------------| 
+|------------------------|  |------------------------|  
+| 0 || 0 | 1 | 2 | 3 | 4 |  | 0 || 0 | 0 | 0 | 0 | 0 |  
+|------------------------|  |------------------------|  
+| 1 || 1 | 2 | 3 | 4 | 0 |  | 1 || 0 | 1 | 2 | 3 | 4 |  
+|------------------------|  |------------------------|  
+| 2 || 2 | 3 | 4 | 0 | 1 |  | 2 || 0 | 2 | 4 | 1 | 3 |  
+|------------------------|  |------------------------|  
+| 3 || 3 | 4 | 0 | 1 | 2 |  | 3 || 0 | 3 | 1 | 4 | 2 |  
+|------------------------|  |------------------------|  
+| 4 || 4 | 0 | 1 | 2 | 3 |  | 4 || 0 | 4 | 3 | 2 | 1 |  
+ ------------------------    ------------------------   
+
 -------------------------
 
 3. Troba les unitats de Z/3Z, de Z/6Z, de Z/7Z i de Z/24Z. Què val phi en cada cas?
 
--------------------------
+a) Z/3Z
+- Elements possibles: 0, 1, 2
+- Busquem els coprims amb 3. mcd(a,3)=1:
+	mcd(1,3)=1
+	mcd(2,3)=1
+- UNITATS: 1, 2
+- φ(3) = 2 (Recompte total quantes unitats te Z/nZ).
+	*Com que 3 és primer, també es pot calcular aixi: φ(p) = p - 1
 
-4. Troba tots els valors de x entre 0 i m − 1 que siguin solucions de les congruències següents.
-(Pista: si no trobes una manera enginyosa de trobar les solucions, simplement pots substituir cada valor x = 1, x = 2, ..., x = m − 1 i comprovar quins funcionen.)
+b) Z/6Z
+- Elements possibles: 0, 1, 2, 3, 4, 5
+- Busquem coprims:
+	mcd(1,6) = 1
+	2, 3, 4 descartats pq comparteixen divisors (2 o 3) amb 6
+	mcd(5,6) = 1
+- UNITATS: 1, 5
+- φ(6) = 2
 
-a) x + 17 ≡ 23 (mod 37).
+c) Z/7Z
+- Elements possibles: 0, 1, 2, 3, 4, 5, 6
+- Busquem coprims:
+	mcd(1,7)=1
+	mcd(2,7)=1
+	mcd(3,7)=1
+	mcd(4,7)=1
+	mcd(5,7)=1
+	mcd(6,7)=1
+- UNITATS: 1, 2, 3, 4, 5, 6
+- φ(7) = 6
 
-----
-
-b) x + 42 ≡ 19 (mod 51).
-
-----
-
-c) x² ≡ 3 (mod 11).
-
-----
-
-d) x² ≡ 2 (mod 13).
-
-----
-
-e) x² ≡ 1 (mod 8).
-
--------------------------
-
-Optatiu:
-
-Demostra la proposició del document d'introducció a l'aritmètica modular.
+d) Z/24Z
+- Elements possibles: 0, 1, 2, ..., 23
+- Busquem coprims:
+	mcd(1,24)=1
+	mcd(5,24)=1
+	mcd(7,24)=1
+	mcd(11,24)=1
+	mcd(13,24)=1
+	mcd(17,24)=1
+	mcd(19,24)=1
+	mcd(23,24)=1
+- UNITATS: 1, 5, 7, 11, 13, 17, 19, 23
+- φ(24) = 8
 
 -------------------------
