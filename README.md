@@ -14,5 +14,6 @@ Repositori centralitzat que conté els projectes, pràctiques i treballs realitz
 | :--- | :--- |
 | [**Accés a Dades**](./Acces_Dades) | Maneig de fitxers, connectors BDD, ORM (Hibernate/JPA), NoSQL i Spring Data. |
 | [**Programació de Serveis i Processos**](./Programacio-de-serveis-i-processos) | Programació multiprocés, multithreading (fils), xarxes (Sockets) i seguretat. |
+| [**Programació Multimèdia i Dispositius Mòbils**](./Programacio_multimedia_i_dispositius_mobils) | Desenvolupament d'aplicacions mòbils (Android, Kotlin/Java), interfícies d'usuari mòbils, multimèdia, sensors i serveis integrats. |
 
 ---
