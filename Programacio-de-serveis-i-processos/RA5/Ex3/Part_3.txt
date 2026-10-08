@@ -49,8 +49,8 @@ Solució única entre 0 i 50 és x = 28
 c) x² ≡ 3 (mod 11).
 
 - Possibles valors de x:
-1, 2, 3, 4, ..., 10
-- Calcul del residu de cada x² ((x*x)%11). I sel·leccionar tots els resultats que siguin = 3
+0, 1, 2, 3, 4, ..., 10
+- Calcul del residu de cada x² ((x*x)%11) i selecció tots els resultats que siguin = 3
 5² % 11 = ?
 25 // 11 = 2
 11 * 2 = 22
@@ -63,14 +63,26 @@ c) x² ≡ 3 (mod 11).
 36 - 33 = 3
 6² % 11 = 3
 
-Solucions possibles entre 0 i 10 són x = 5 i x = 6
+Solucions possibles entre 0 i 10 són x=5 i x=6
 
 ----
 
 d) x² ≡ 2 (mod 13).
 
+- Possibles valors de x:
+0, 1, 2, 3, ..., 12
+- Calcul del residu de cada x² i selecció tots els resultats que siguin = 2
+Cap resultat es = 2, per tant no existeix cap solució per a x entre 0 i 12.
+
 ----
 
 e) x² ≡ 1 (mod 8).
+
+- Possibles valors de x:
+0, 1, 2, 3, 4, ..., 7
+- Calcul del residu de cada x² i selecció tots els resultats que siguin = 1
+1,3,5,7 (Fet amb calculadora) tots residus d'aquests valors donen 1.
+
+Solucions possibles entre 0 i 7 són x=1, x=3, x=5 i x=7
 
 -------------------------
