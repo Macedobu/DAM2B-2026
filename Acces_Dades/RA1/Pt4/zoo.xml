@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<zoo>
+    <animal id="1">
+        <nom>hamster</nom>
+        <especie>hamsterus</especie>
+        <aliment>humans</aliment>
+        <edat>99</edat>
+    </animal>
+    <animal id="2">
+        <nom>gos</nom>
+        <especie>perrus</especie>
+        <aliment>humans</aliment>
+        <edat>5</edat>
+    </animal>
+    <animal id="4">
+        <nom>cát</nom>
+        <especie>catis</especie>
+        <aliment>verdura</aliment>
+        <edat>5</edat>
+    </animal>
+    <animal id="5">
+        <nom>lleo</nom>
+        <especie>leonis</especie>
+        <aliment>verdura</aliment>
+        <edat>2</edat>
+    </animal>
+</zoo>

@@ -11,5 +11,6 @@
 | [Pt1](./Pt1) | Fer una app. que operi sobre fitxers de text. |
 | [Pt2](./Pt2) | Fer una app. que operi sobre fitxers utilitzant decoradors. |
 | [Pt3](./Pt3) | Fer una app. que permeti la persistència d'objectes. |
+| [Pt4](./Pt4) | Creació i lectura d'arxius XML amb Java. |
 
 ---
