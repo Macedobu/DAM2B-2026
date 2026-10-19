@@ -1,0 +1,42 @@
+print((347+513)%763)
+print((3274 + 1238 + 7231 + 6437) % 9254)
+print((153 * 287) % 353)
+
+print((5327 * 6135 * 7139 * 2187 * 5219 * 1873) % 8157)
+
+
+factores=[5327,6135,7139,2187,5219,1873]
+x=1
+multiplicacion=1
+for factor in factores:
+	x*factor
+	multiplicacion*=factor
+	x%=8157
+	print(f"el producto modular es {x}")
+
+
+
+3)
+
+	d)
+	import math
+	n=24
+	for i in range(n):
+		if math.gcd(n,i)==1:
+		j=1
+		while i*j%24 != 1:
+			j+=1
+		print(f"el inverso de {i} es {j}")
+
+4)
+	b)
+	n=11
+	for i in range(n):
+		if i*i % n ==3:
+			print(i)
+
+	c)
+	n=13
+	for i in range(n):
+		if i*i % n ==2:
+			print(i)
