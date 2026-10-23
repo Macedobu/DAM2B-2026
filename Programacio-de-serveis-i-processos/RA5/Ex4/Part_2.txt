@@ -1,0 +1,53 @@
+(b) 2^477 (mod 1000).
+Base(g) = 2
+Exponent (A) = 477
+Mòdul (N) = 1000
+
+Pas1: Trobar desenvolupament binari de l'exponent
+
+- Dividim l'exponent succesivament entre 2 fins arribar al quocient 0 i ens quedem amb els residus:
+477|2
+238|1 --> posició 2^0
+119|0
+059|1 --> posició 2^2
+029|1 --> posició 2^3
+014|1 --> posició 2^4
+007|0
+003|1 --> posició 2^6
+001|1 --> posició 2^7
+000|1 --> posició 2^8
+
+- Escrivim les potències de 2 on el residu és 1:
+477 = 2^0 + 2^2 + 2^3 + 2^4 + 2^6 + 2^7 + 2^8
+
+Pas2: Càlcul de les potències successives al quadrat mòdul 1000
+
+- Anem elevant al quadrat el resultat anterior i reduint mòdul 256 a cada pas:
+2^(2^0) = 2^1 ≡ 2 (mod 1000)
+2^(2^1) = 2^2 ≡ 4 (mod 1000)
+2^(2^2) = 4^2 ≡ 16 (mod 1000)
+2^(2^3) = 16^2 ≡ 256 (mod 1000)
+2^(2^4) = 256^2 = 65536 ≡ 536 (mod 1000) 65536=1000*65+536
+2^(2^5) = 536^2 = 287296 ≡ 296 (mod 1000) 287296=1000*287+296
+2^(2^6) = 296^2 = 87616 ≡ 616 (mod 1000) 87616=1000*87+616
+2^(2^7) = 616^2 = 379456 ≡ 456 (mod 1000) 379456=1000*379+456
+2^(2^8) = 456^2 = 207936 ≡ 936 (mod 1000) 207936=1000*207+936
+
+Pas3: Multiplicar potències necessàries
+2^477 ≡ 2^(2^0) * 2^(2^2) * 2^(2^3) * 2^(2^4) * 2^(2^6) * 2^(2^7) * 2^(2^8) (mod 1000)
+2^477 ≡ 2 * 16 * 256 * 536 * 616 * 456 * 936 (mod 1000)
+
+- Multipliquem pas a pas per no treballar amb nombres molt grans
+2 * 16 ≡ 32 (mod 1000)
+32 * 256 = 8192 ≡ 192 (mod 1000) 8192=1000*8+192
+192 * 536 = 102912 ≡ 912 (mod 1000) 102912=1000*102+912
+912 * 616 = 561792 ≡ 792 (mod 1000) 561792=1000*561+792
+792 * 456 = 361152 ≡ 152 (mod 1000) 361152=1000*361+152
+152 * 936 = 142272 ≡ 272 (mod 1000) 142272=1000*142+272
+
+- Resultat final
+2^477 mod 1000 = 272
+o
+2^477 ≡ 272 (mod 1000)
+
+------------------------

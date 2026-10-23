@@ -1,0 +1,48 @@
+(a) 17^183 (mod 256).
+Base (g) = 17
+Exponent (A) = 183
+Mòdul (N) = 256
+
+Pas1: Trobar desenvolupament binari de l'exponent
+
+- Dividim l'exponent succesivament entre 2 fins arribar al quocient 0 i ens quedem amb els residus:
+183|2
+091|1 --> posició 2^0
+045|1 --> posició 2^1
+022|1 --> posició 2^2
+011|0 --> posició 2^3
+005|1 --> posició 2^4
+002|1 --> posició 2^5
+001|0 --> posició 2^6
+000|1 --> posició 2^7
+
+- Escrivim les potències de 2 on el residu és 1:
+183 = 2^0 + 2^1 + 2^2 + 2^4 + 2^5 + 2^7 = 1 + 2 + 4 + 16 + 32 + 128
+
+Pas2: Càlcul de les potències successives al quadrat mòdul 256
+
+- Anem elevant al quadrat el resultat anterior i reduint mòdul 256 a cada pas:
+17^(2^0) = 17^1 ≡ 17 (mod 256)
+17^(2^1) = 17^2 = 289 ≡ 33 (mod 256) 289=256+33
+17^(2^2) = 33^2 = 1089 ≡ 65 (mod 256) 1089=256*4+65
+17^(2^3) = 65^2 = 4225 ≡ 129 (mod 256) 4225=256*16+129
+17^(2^4) = 129^2 = 16641 ≡ 1 (mod 256) 16641=256*65+1
+17^(2^5) = 1^2 ≡ 1
+17^(2^6) = 1^2 ≡ 1
+17^(2^7) = 1^2 ≡ 1
+
+Pas3: Multiplicar potències necessàries
+17^183 ≡ 17^(2^0) * 17^(2^1) * 17^(2^2) * 17^(2^4) * 17^(2^5) * 17^(2^7) (mod 256)
+17^183 ≡ 17 * 33 * 65 * 1 * 1* 1 (mod 256)
+
+- Multipliquem pas a pas per no treballar amb nombres molt grans
+17 * 33 = 561 ≡ 49 (mod 256) 561=256*2+49
+49 * 65 = 3185 ≡ 113 (mod 256) 3185=256*12+113
+(no cal fer multiplicacions *1)
+
+- Resultat final
+17^183 mod 256 = 113
+o
+17^183 ≡ 113 (mod 256)
+
+------------------------
