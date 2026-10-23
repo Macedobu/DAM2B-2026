@@ -18,7 +18,7 @@ Pas1: Trobar desenvolupament binari de l'exponent
 000|1 --> posició 2^8
 
 - Escrivim les potències de 2 on el residu és 1:
-477 = 2^0 + 2^2 + 2^3 + 2^4 + 2^6 + 2^7 + 2^8
+477 = 2^0 + 2^2 + 2^3 + 2^4 + 2^6 + 2^7 + 2^8 = 1 + 4 + 8 + 16 + 64 + 128 + 256
 
 Pas2: Càlcul de les potències successives al quadrat mòdul 1000
 
