@@ -22,7 +22,7 @@ Pas1: Trobar desenvolupament binari de l'exponent
 
 Pas2: Càlcul de les potències successives al quadrat mòdul 1000
 
-- Anem elevant al quadrat el resultat anterior i reduint mòdul 256 a cada pas:
+- Anem elevant al quadrat el resultat anterior i reduint mòdul 1000 a cada pas:
 2^(2^0) = 2^1 ≡ 2 (mod 1000)
 2^(2^1) = 2^2 ≡ 4 (mod 1000)
 2^(2^2) = 4^2 ≡ 16 (mod 1000)
