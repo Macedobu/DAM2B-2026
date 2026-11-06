@@ -12,7 +12,6 @@
 | [Ex2](./Ex2) | **Exercicis II:** Algorisme d'Euclides, càlcul de MCD, equacions diofàntiques i codificació en Python. |
 | [Ex3](./Ex3) | **Exercicis III:** Operacions d'aritmètica modular, taules i unitats a $\mathbb{Z}/n\mathbb{Z}$, funció $\phi$ d'Euler i resolució de congruències. |
 | [Ex4](./Ex4) | **Exercicis IV:** L'algorisme de potència ràpida. |
-| [Ex5](./Ex5) | **Exercicis V:** Nombres primers. |
 | [Ex6](./Ex6) | **Exercicis VI:** Potencies en cossos finits. |
 
 ---
