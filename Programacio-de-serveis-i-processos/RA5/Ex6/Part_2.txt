@@ -1,0 +1,17 @@
+Calculin 2^15485206 mod 15485207. Com és que el resultat és diferent d'1? Què té de sorprenent aquest resultat?
+
+
+
+Demostrin la proposició de la secció del Petit Teorema de Fermat.
+
+
+
+Provin que 2 és una arrel primitva de F11, que no ho és de F17 i que 3 sí que ho és.
+
+
+
+Provar que F29 té 12 arrels primitives.
+
+
+
+Opcional: Demostrin el Petit Teorema de Fermat.
