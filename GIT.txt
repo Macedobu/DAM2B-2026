@@ -1,0 +1,7 @@
+git add .
+git commit -m "Descripció dels canvis"
+git push
+
+git fetch origin
+git status
+git pull origin main

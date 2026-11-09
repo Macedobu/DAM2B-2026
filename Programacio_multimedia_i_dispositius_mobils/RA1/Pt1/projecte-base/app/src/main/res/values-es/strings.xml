@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PROJECTE BASE — model en català de tots els textos de l'aplicació.
+
+    Aquest fitxer ja conté TOTES les claus que necessitarà l'aplicació.
+    No n'afegeixis de nous si no cal: si en calgués, recorda que
+    hauràs d'afegir-los també a values-es/strings.xml i values-en/strings.xml.
+
+    Les traduccions al castellà i a l'anglès es fan copiant aquest fitxer
+    a les carpetes values-es/ i values-en/ i traduint-ne els VALORS
+    (el nom de la clau ha de ser exactament el mateix als tres idiomes).
+-->
+<resources>
+
+    <string name="app_name">Conversor</string>
+
+    <!-- Menú principal (MainActivity) -->
+    <string name="boto_temperatura">Temperatura</string>
+    <string name="boto_longitud">Longitud</string>
+    <string name="boto_massa">Massa</string>
+    <string name="menu_subtitle">Selecciona una magnitud para convertir</string>
+
+    <!-- Títols de les pantalles (etiquetes de les Activities al manifest) -->
+    <string name="temperatura_titol">Conversor de Temperatura</string>
+    <string name="longitud_titol">Conversor de Longitud</string>
+    <string name="massa_titol">Conversor de Massa</string>
+
+    <!-- Formulari comú dels tres conversors -->
+    <string name="label_valor">Introduce el valor:</string>
+    <string name="hint_valor">Ej: 25.5</string>
+    <string name="label_de">Convierte de:</string>
+    <string name="label_a">Convierte a:</string>
+    <string name="boto_convertir">Convertir</string>
+
+    <!-- Unitats de temperatura -->
+    <string name="celsius">Celsius (°C)</string>
+    <string name="fahrenheit">Fahrenheit (°F)</string>
+    <string name="kelvin">Kelvin (K)</string>
+
+    <!-- Unitats de longitud -->
+    <string name="quilometre">Kilómetro (km)</string>
+    <string name="milla">Milla (mi)</string>
+    <string name="yarda">Yarda (yd)</string>
+
+    <!-- Unitats de massa -->
+    <string name="quilogram">Kilogramo (kg)</string>
+    <string name="lliura">Libra (lb)</string>
+    <string name="unca">Onza (oz)</string>
+
+    <!-- Resultat -->
+    <string name="resultat_label">Resultado:</string>
+    <string name="resultat_inicial">—</string>
+
+    <!-- Errors -->
+    <string name="error_buid">Introduce un valor</string>
+    <string name="error_numeric">Introduce un número válido</string>
+    <string name="error_unitats">Selecciona unidades distintas</string>
+    <string name="error_generic">Error en la conversión</string>
+
+</resources>

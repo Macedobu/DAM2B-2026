@@ -1,0 +1,15 @@
+### Android / Gradle / Kotlin ###
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/app/build
+
+### Fitxers de l'entorn de desenvolupament (no s'han de pujar) ###
+*.log

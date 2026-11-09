@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PROJECTE BASE — model en català de tots els textos de l'aplicació.
+
+    Aquest fitxer ja conté TOTES les claus que necessitarà l'aplicació.
+    No n'afegeixis de nous si no cal: si en calgués, recorda que
+    hauràs d'afegir-los també a values-es/strings.xml i values-en/strings.xml.
+
+    Les traduccions al castellà i a l'anglès es fan copiant aquest fitxer
+    a les carpetes values-es/ i values-en/ i traduint-ne els VALORS
+    (el nom de la clau ha de ser exactament el mateix als tres idiomes).
+-->
+<resources>
+
+    <string name="app_name">Conversor</string>
+
+    <!-- Menú principal (MainActivity) -->
+    <string name="boto_temperatura">Temperature</string>
+    <string name="boto_longitud">Length</string>
+    <string name="boto_massa">Mass</string>
+    <string name="menu_subtitle">Choose a magnitude to convert</string>
+
+    <!-- Títols de les pantalles (etiquetes de les Activities al manifest) -->
+    <string name="temperatura_titol">Temperature Conversion</string>
+    <string name="longitud_titol">Length Conversion</string>
+    <string name="massa_titol">Mass Conversion</string>
+
+    <!-- Formulari comú dels tres conversors -->
+    <string name="label_valor">Introduce value:</string>
+    <string name="hint_valor">Ex: 25.5</string>
+    <string name="label_de">Convert from:</string>
+    <string name="label_a">Convert to:</string>
+    <string name="boto_convertir">Convert</string>
+
+    <!-- Unitats de temperatura -->
+    <string name="celsius">Celsius (°C)</string>
+    <string name="fahrenheit">Fahrenheit (°F)</string>
+    <string name="kelvin">Kelvin (K)</string>
+
+    <!-- Unitats de longitud -->
+    <string name="quilometre">Kilòmeter (km)</string>
+    <string name="milla">Mile (mi)</string>
+    <string name="yarda">Yard (yd)</string>
+
+    <!-- Unitats de massa -->
+    <string name="quilogram">kilogram (kg)</string>
+    <string name="lliura">Pound (lb)</string>
+    <string name="unca">Ounce (oz)</string>
+
+    <!-- Resultat -->
+    <string name="resultat_label">Result:</string>
+    <string name="resultat_inicial">—</string>
+
+    <!-- Errors -->
+    <string name="error_buid">Introduce a value</string>
+    <string name="error_numeric">Introduce a valid number</string>
+    <string name="error_unitats">Choose different units</string>
+    <string name="error_generic">Error in the conversion</string>
+
+</resources>

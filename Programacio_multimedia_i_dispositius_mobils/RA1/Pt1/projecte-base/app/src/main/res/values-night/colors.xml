@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PROJECTE BASE — paleta de colors de l'aplicació (tema clar).
+
+    Tots els colors de la interfície s'han de definir aquí i referenciar
+    des de la resta de fitxers amb @color/nom_del_color.
+    No escrivis codis de color (#RRGGBB) directament als layouts.
+
+    La versió del tema nocturn es defineix a res/values-night/colors.xml,
+    amb els MATEIXOS noms de color i valors escurs.
+-->
+<resources>
+
+    <!-- Marca -->
+    <color name="primary">#D0BCFF</color>
+    <color name="primary_dark">#381E72</color>
+    <color name="on_primary">#381E72</color>
+    <color name="primary_container">#4F378B</color>
+    <color name="on_primary_container">#EADDFF</color>
+
+    <!-- Superfície -->
+    <color name="background">#141218</color>
+    <color name="surface">#141218</color>
+    <color name="on_surface">#E6E1E5</color>
+
+    <!-- Text -->
+    <color name="text_primary">#E6E1E5</color>
+    <color name="text_secondary">#CAC4D0</color>
+
+    <!-- Resultat -->
+    <color name="resultat_background">#4F378B</color>
+    <color name="resultat_text">#EADDFF</color>
+
+    <!-- Error -->
+    <color name="error">#F2B8B5</color>
+    <color name="on_error">#601410</color>
+
+    <!-- Divisor -->
+    <color name="divider">#49454F</color>
+
+</resources>
