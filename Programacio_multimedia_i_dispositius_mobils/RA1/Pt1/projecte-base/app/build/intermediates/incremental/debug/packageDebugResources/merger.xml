@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res"><file name="activity_main" path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res/layout/activity_main.xml" qualifiers="" type="layout"/><file path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res/values/themes.xml" qualifiers=""><style name="Theme.Conversor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorSecondary">@color/primary</item>
+        <item name="colorSecondaryVariant">@color/primary_dark</item>
+        <item name="colorOnSecondary">@color/on_primary</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style><style name="BotoConversor.Boto" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style><style name="BotoConversor.Boto.Primary" parent="BotoConversor.Boto">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/on_primary</item>
+    </style><style name="BotoConversor.Boto.Container" parent="BotoConversor.Boto">
+        <item name="backgroundTint">@color/primary_container</item>
+        <item name="android:textColor">@color/on_primary_container</item>
+    </style><style name="TextResultat" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/resultat_text</item>
+        <item name="android:background">@color/resultat_background</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style></file><file path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res/values/colors.xml" qualifiers=""><color name="primary">#FF6750A4</color><color name="primary_dark">#FF4F378B</color><color name="on_primary">#FFFFFFFF</color><color name="primary_container">#FFEADDFF</color><color name="on_primary_container">#FF21005D</color><color name="background">#FFFEF7FF</color><color name="surface">#FFFEF7FF</color><color name="on_surface">#FF1D1B20</color><color name="text_primary">#FF1D1B20</color><color name="text_secondary">#FF49454F</color><color name="resultat_background">#FFEADDFF</color><color name="resultat_text">#FF21005D</color><color name="error">#FFB3261E</color><color name="on_error">#FFFFFFFF</color><color name="divider">#FFCAC4D0</color></file><file path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res/values/strings.xml" qualifiers=""><string name="app_name">Conversor</string><string name="boto_temperatura">Temperatura</string><string name="boto_longitud">Longitud</string><string name="boto_massa">Massa</string><string name="menu_subtitle">Selecciona una magnitud per convertir</string><string name="temperatura_titol">Conversor de Temperatura</string><string name="longitud_titol">Conversor de Longitud</string><string name="massa_titol">Conversor de Massa</string><string name="label_valor">Introdueix el valor:</string><string name="hint_valor">Ex: 25.5</string><string name="label_de">Converteix de:</string><string name="label_a">Converteix a:</string><string name="boto_convertir">Convertir</string><string name="celsius">Celsius (°C)</string><string name="fahrenheit">Fahrenheit (°F)</string><string name="kelvin">Kelvin (K)</string><string name="quilometre">Quilòmetre (km)</string><string name="milla">Milla (mi)</string><string name="yarda">Yarda (yd)</string><string name="quilogram">Quilogram (kg)</string><string name="lliura">Lliura (lb)</string><string name="unca">Unça (oz)</string><string name="resultat_label">Resultat:</string><string name="resultat_inicial">—</string><string name="error_buid">Introdueix un valor</string><string name="error_numeric">Introdueix un número vàlid</string><string name="error_unitats">Selecciona unitats diferents</string><string name="error_generic">Error en la conversió</string></file><file name="activity_longitud" path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res/layout/activity_longitud.xml" qualifiers="" type="layout"/><file name="activity_massa" path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res/layout/activity_massa.xml" qualifiers="" type="layout"/><file name="activity_temperatura" path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res/layout/activity_temperatura.xml" qualifiers="" type="layout"/><file path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res/values-en/strings.xml" qualifiers="en"><string name="app_name">Conversor</string><string name="boto_temperatura">Temperature</string><string name="boto_longitud">Length</string><string name="boto_massa">Mass</string><string name="menu_subtitle">Choose a magnitude to convert</string><string name="temperatura_titol">Temperature Conversion</string><string name="longitud_titol">Length Conversion</string><string name="massa_titol">Mass Conversion</string><string name="label_valor">Introduce value:</string><string name="hint_valor">Ex: 25.5</string><string name="label_de">Convert from:</string><string name="label_a">Convert to:</string><string name="boto_convertir">Convert</string><string name="celsius">Celsius (°C)</string><string name="fahrenheit">Fahrenheit (°F)</string><string name="kelvin">Kelvin (K)</string><string name="quilometre">Kilòmeter (km)</string><string name="milla">Mile (mi)</string><string name="yarda">Yard (yd)</string><string name="quilogram">kilogram (kg)</string><string name="lliura">Pound (lb)</string><string name="unca">Ounce (oz)</string><string name="resultat_label">Result:</string><string name="resultat_inicial">—</string><string name="error_buid">Introduce a value</string><string name="error_numeric">Introduce a valid number</string><string name="error_unitats">Choose different units</string><string name="error_generic">Error in the conversion</string></file><file path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res/values-es/strings.xml" qualifiers="es"><string name="app_name">Conversor</string><string name="boto_temperatura">Temperatura</string><string name="boto_longitud">Longitud</string><string name="boto_massa">Massa</string><string name="menu_subtitle">Selecciona una magnitud para convertir</string><string name="temperatura_titol">Conversor de Temperatura</string><string name="longitud_titol">Conversor de Longitud</string><string name="massa_titol">Conversor de Massa</string><string name="label_valor">Introduce el valor:</string><string name="hint_valor">Ej: 25.5</string><string name="label_de">Convierte de:</string><string name="label_a">Convierte a:</string><string name="boto_convertir">Convertir</string><string name="celsius">Celsius (°C)</string><string name="fahrenheit">Fahrenheit (°F)</string><string name="kelvin">Kelvin (K)</string><string name="quilometre">Kilómetro (km)</string><string name="milla">Milla (mi)</string><string name="yarda">Yarda (yd)</string><string name="quilogram">Kilogramo (kg)</string><string name="lliura">Libra (lb)</string><string name="unca">Onza (oz)</string><string name="resultat_label">Resultado:</string><string name="resultat_inicial">—</string><string name="error_buid">Introduce un valor</string><string name="error_numeric">Introduce un número válido</string><string name="error_unitats">Selecciona unidades distintas</string><string name="error_generic">Error en la conversión</string></file><file path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res/values-night/colors.xml" qualifiers="night-v8"><color name="primary">#D0BCFF</color><color name="primary_dark">#381E72</color><color name="on_primary">#381E72</color><color name="primary_container">#4F378B</color><color name="on_primary_container">#EADDFF</color><color name="background">#141218</color><color name="surface">#141218</color><color name="on_surface">#E6E1E5</color><color name="text_primary">#E6E1E5</color><color name="text_secondary">#CAC4D0</color><color name="resultat_background">#4F378B</color><color name="resultat_text">#EADDFF</color><color name="error">#F2B8B5</color><color name="on_error">#601410</color><color name="divider">#49454F</color></file><file path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/main/res/values-night/themes.xml" qualifiers="night-v8"><style name="Theme.Conversor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorSecondary">@color/primary</item>
+        <item name="colorSecondaryVariant">@color/primary_dark</item>
+        <item name="colorOnSecondary">@color/on_primary</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style><style name="BotoConversor.Boto" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style><style name="BotoConversor.Boto.Primary" parent="BotoConversor.Boto">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/on_primary</item>
+    </style><style name="BotoConversor.Boto.Container" parent="BotoConversor.Boto">
+        <item name="backgroundTint">@color/primary_container</item>
+        <item name="android:textColor">@color/on_primary_container</item>
+    </style><style name="TextResultat" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/resultat_text</item>
+        <item name="android:background">@color/resultat_background</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/usuari-tarda/AndroidStudioProjects/projecte-base/app/build/generated/res/resValues/debug"/></dataSet><mergedItems/></merger>

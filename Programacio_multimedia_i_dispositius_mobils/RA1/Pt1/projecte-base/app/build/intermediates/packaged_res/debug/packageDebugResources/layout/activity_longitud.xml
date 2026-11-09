@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_valor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editValor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_container"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:hint="@string/hint_valor"
+        android:inputType="numberDecimal|numberSigned"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_de"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_container"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/radioQuilometre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quilometre"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioMilla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/milla"/>
+
+        <RadioButton
+            android:id="@+id/radioYarda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yarda"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_a"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_container"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/radioQuilometreA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quilometre"/>
+
+        <RadioButton
+            android:id="@+id/radioMillaA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/milla"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioYardaA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yarda"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/botoConvertir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/boto_convertir"
+        android:theme="@style/BotoConversor.Boto.Primary"/>
+
+    <TextView
+        android:id="@+id/textResultat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resultat_inicial"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/TextResultat"/>
+
+</LinearLayout>

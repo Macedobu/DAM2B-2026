@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFFEF7FF</color>
+    <color name="divider">#FFCAC4D0</color>
+    <color name="error">#FFB3261E</color>
+    <color name="on_error">#FFFFFFFF</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="on_primary_container">#FF21005D</color>
+    <color name="on_surface">#FF1D1B20</color>
+    <color name="primary">#FF6750A4</color>
+    <color name="primary_container">#FFEADDFF</color>
+    <color name="primary_dark">#FF4F378B</color>
+    <color name="resultat_background">#FFEADDFF</color>
+    <color name="resultat_text">#FF21005D</color>
+    <color name="surface">#FFFEF7FF</color>
+    <color name="text_primary">#FF1D1B20</color>
+    <color name="text_secondary">#FF49454F</color>
+    <string name="app_name">Conversor</string>
+    <string name="boto_convertir">Convertir</string>
+    <string name="boto_longitud">Longitud</string>
+    <string name="boto_massa">Massa</string>
+    <string name="boto_temperatura">Temperatura</string>
+    <string name="celsius">Celsius (°C)</string>
+    <string name="error_buid">Introdueix un valor</string>
+    <string name="error_generic">Error en la conversió</string>
+    <string name="error_numeric">Introdueix un número vàlid</string>
+    <string name="error_unitats">Selecciona unitats diferents</string>
+    <string name="fahrenheit">Fahrenheit (°F)</string>
+    <string name="hint_valor">Ex: 25.5</string>
+    <string name="kelvin">Kelvin (K)</string>
+    <string name="label_a">Converteix a:</string>
+    <string name="label_de">Converteix de:</string>
+    <string name="label_valor">Introdueix el valor:</string>
+    <string name="lliura">Lliura (lb)</string>
+    <string name="longitud_titol">Conversor de Longitud</string>
+    <string name="massa_titol">Conversor de Massa</string>
+    <string name="menu_subtitle">Selecciona una magnitud per convertir</string>
+    <string name="milla">Milla (mi)</string>
+    <string name="quilogram">Quilogram (kg)</string>
+    <string name="quilometre">Quilòmetre (km)</string>
+    <string name="resultat_inicial">—</string>
+    <string name="resultat_label">Resultat:</string>
+    <string name="temperatura_titol">Conversor de Temperatura</string>
+    <string name="unca">Unça (oz)</string>
+    <string name="yarda">Yarda (yd)</string>
+    <style name="BotoConversor.Boto" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="BotoConversor.Boto.Container" parent="BotoConversor.Boto">
+        <item name="backgroundTint">@color/primary_container</item>
+        <item name="android:textColor">@color/on_primary_container</item>
+    </style>
+    <style name="BotoConversor.Boto.Primary" parent="BotoConversor.Boto">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/on_primary</item>
+    </style>
+    <style name="TextResultat" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/resultat_text</item>
+        <item name="android:background">@color/resultat_background</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <style name="Theme.Conversor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorSecondary">@color/primary</item>
+        <item name="colorSecondaryVariant">@color/primary_dark</item>
+        <item name="colorOnSecondary">@color/on_primary</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>

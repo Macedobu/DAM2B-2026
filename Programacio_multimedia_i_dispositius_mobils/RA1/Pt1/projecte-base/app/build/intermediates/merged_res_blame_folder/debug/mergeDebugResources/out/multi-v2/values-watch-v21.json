@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "cat.institut.dam.conversor.app-mergeDebugResources-29:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "/home/usuari-tarda/.gradle/caches/transforms-4/bba5057b76ae7c31495b8ed39f1ab7f5/transformed/appcompat-1.7.0/res/values-watch-v21/values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

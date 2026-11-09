@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#141218</color>
+    <color name="divider">#49454F</color>
+    <color name="error">#F2B8B5</color>
+    <color name="on_error">#601410</color>
+    <color name="on_primary">#381E72</color>
+    <color name="on_primary_container">#EADDFF</color>
+    <color name="on_surface">#E6E1E5</color>
+    <color name="primary">#D0BCFF</color>
+    <color name="primary_container">#4F378B</color>
+    <color name="primary_dark">#381E72</color>
+    <color name="resultat_background">#4F378B</color>
+    <color name="resultat_text">#EADDFF</color>
+    <color name="surface">#141218</color>
+    <color name="text_primary">#E6E1E5</color>
+    <color name="text_secondary">#CAC4D0</color>
+    <style name="BotoConversor.Boto" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="BotoConversor.Boto.Container" parent="BotoConversor.Boto">
+        <item name="backgroundTint">@color/primary_container</item>
+        <item name="android:textColor">@color/on_primary_container</item>
+    </style>
+    <style name="BotoConversor.Boto.Primary" parent="BotoConversor.Boto">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/on_primary</item>
+    </style>
+    <style name="TextResultat" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/resultat_text</item>
+        <item name="android:background">@color/resultat_background</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <style name="Theme.Conversor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorSecondary">@color/primary</item>
+        <item name="colorSecondaryVariant">@color/primary_dark</item>
+        <item name="colorOnSecondary">@color/on_primary</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Conversor</string>
+    <string name="boto_convertir">Convertir</string>
+    <string name="boto_longitud">Longitud</string>
+    <string name="boto_massa">Massa</string>
+    <string name="boto_temperatura">Temperatura</string>
+    <string name="celsius">Celsius (°C)</string>
+    <string name="error_buid">Introduce un valor</string>
+    <string name="error_generic">Error en la conversión</string>
+    <string name="error_numeric">Introduce un número válido</string>
+    <string name="error_unitats">Selecciona unidades distintas</string>
+    <string name="fahrenheit">Fahrenheit (°F)</string>
+    <string name="hint_valor">Ej: 25.5</string>
+    <string name="kelvin">Kelvin (K)</string>
+    <string name="label_a">Convierte a:</string>
+    <string name="label_de">Convierte de:</string>
+    <string name="label_valor">Introduce el valor:</string>
+    <string name="lliura">Libra (lb)</string>
+    <string name="longitud_titol">Conversor de Longitud</string>
+    <string name="massa_titol">Conversor de Massa</string>
+    <string name="menu_subtitle">Selecciona una magnitud para convertir</string>
+    <string name="milla">Milla (mi)</string>
+    <string name="quilogram">Kilogramo (kg)</string>
+    <string name="quilometre">Kilómetro (km)</string>
+    <string name="resultat_inicial">—</string>
+    <string name="resultat_label">Resultado:</string>
+    <string name="temperatura_titol">Conversor de Temperatura</string>
+    <string name="unca">Onza (oz)</string>
+    <string name="yarda">Yarda (yd)</string>
+</resources>
