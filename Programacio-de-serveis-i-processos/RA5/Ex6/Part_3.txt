@@ -2,20 +2,28 @@ Demostrin la proposició de la secció del Petit Teorema de Fermat.
 
 p: És el nombre primer sobre el qual fem el mòdul (per exemple, p = 11).
 a: És la base, el nombre que estem elevant a potències (per exemple, a = 2).
-n: És un exponent qualsevol que fa que la potència doni 1 mòdul p (és a dir, a^n ≡ 1 (mod p)).
-k: És l'ORDRE de a. És l'exponent positiu més petit de tots que aconsegueix que a^k ≡ 1 (mod p).
+n: És un exponent QUALSEVOL que fa que la potència doni 1 mòdul p (és a dir, a^n ≡ 1 (mod p)).
+k: És l'ORDRE de a. És l'exponent positiu MÉS PETIT de tots que aconsegueix que a^k ≡ 1 (mod p).
 q: És el quocient de dividir n entre k.
 r: És el residu de la divisió de n entre k.
 
+Exemple: 2^6 ≡ 1 (mod 7)
+
 Pas1: Dividim l'exponent n entre l'ordre k
 n = k * q + r
+
+Exemple: 6 = 3 * q + r = 3 * 2 + 0
 
 Pas2: Substituim aquesta divisió a la potència a^n
 Calculem a^n (mod p) fent servir l'expresió anterior:
 a^n = a^(k+q+r)
 
+Exemple: 2^6 = 2^(3 * 2 + 0) (mod 7)
+
 Per les propoetats de les potències (exponents que es sumen passen a multiplicació):
 a^n = (a^k)^q * a^r
+
+Exemple: 2^6 = (2^3)^2 * 2^0 (mod 7)
 
 Pas3: Usem la informació que tenim
 Sabem per la definició d'ordre que a^k ≡ 1 (mod p)
@@ -25,9 +33,13 @@ Si substituim a^k per 1, tenim (1)^q = 1
 Per tant:
 a^n ≡ 1^q * a^r ≡ a^r (mod p)
 
+Exemple: 2^6 ≡ (1)^2 * 2^r ≡ 1 * 2^r ≡ 2^r (mod 7)
+
 Pas4: Igualem i treiem la conclusió clau
 La proposició diu que a^n ≡ 1 (mod p). Com acavem de veure que a^n ≡ a^r (mod p), deduim que:
 a^r ≡ 1 (mod p)
+
+Exemple: 2^r ≡ 1 (mod 7)
 
 A tenir en compte:
 k es l'exponent més petit de tots que dona 1
@@ -37,3 +49,7 @@ L'única explicació és que el residu sigui 0
 Pas5: Final de la demostració
 Si el residu r és 0, la divisio del pas1 queda exacta:
 n = k * q
+
+Exemple: 6 = 3 * 2
+
+Això demostra que l'ordre k (3) divideix l'exponent n (6)
