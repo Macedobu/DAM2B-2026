@@ -10,8 +10,8 @@
 
 ## Índex RA
 
-| RA | Eines / Tecnologies |
+| RA | Pràctiques |
 | :--- | :--- |
-| [RA1](./RA1) |  |
+| RA1 | [Conversor](./RA1/Pt1/projecte-base) |
 
 ---
