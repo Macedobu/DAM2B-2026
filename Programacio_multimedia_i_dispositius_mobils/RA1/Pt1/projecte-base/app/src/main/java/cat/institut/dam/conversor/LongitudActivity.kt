@@ -7,6 +7,7 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.util.Locale
 
 class LongitudActivity : AppCompatActivity() {
 
@@ -23,7 +24,7 @@ class LongitudActivity : AppCompatActivity() {
 
         // Programem botó convertir
         botoConvertir.setOnClickListener {
-            val textValor = editValor.text.toString()
+            val textValor = editValor.text.toString().trim()
 
             // Control d'errors per si l'usuari no escriu res
             if (textValor.isEmpty()) {
@@ -56,11 +57,27 @@ class LongitudActivity : AppCompatActivity() {
                 else -> "mi"
             }
 
-            // Fem la conversio
-            val resultat = convertirLongitud(valor, unitatOrigen, unitatDesti)
+            // Control d'errors per si l'usuari agafa la mateixa unitat
+            if (unitatOrigen == unitatDesti) {
+                Toast.makeText(this, getString(R.string.error_unitats), Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
-            // Mostrem el resultat
-            textResultat.text = "Resultat: $resultat $unitatDesti"
+            try {
+
+                // Fem la conversio
+                val resultat = convertirLongitud(valor, unitatOrigen, unitatDesti)
+
+                // Formatem el text i el mostrem
+                val textFormatat =
+                    String.format(Locale.US, "Resultat: %.2f %s", resultat, unitatDesti)
+                textResultat.text = textFormatat
+
+            }catch (e: Exception) {
+
+                // Control d'errors per si el calcul falla per qualsevol altre motiu
+                Toast.makeText(this, getString(R.string.error_generic), Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

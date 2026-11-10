@@ -108,7 +108,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/boto_convertir"
-        android:theme="@style/BotoConversor.Boto.Primary"/>
+        style="@style/BotoConversor.Boto.Primary"/>
 
     <TextView
         android:id="@+id/textResultat"
@@ -119,6 +119,6 @@
         android:textStyle="bold"
         android:textColor="@color/text_primary"
         android:layout_marginBottom="8dp"
-        android:theme="@style/TextResultat"/>
+        style="@style/TextResultat"/>
 
 </LinearLayout>
