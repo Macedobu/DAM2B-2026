@@ -25,6 +25,24 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".TemperaturaActivity"
+            android:exported="false"
+            android:label="@string/temperatura_titol">
+        </activity>
+
+        <activity
+            android:name=".LongitudActivity"
+            android:exported="false"
+            android:label="@string/longitud_titol">
+        </activity>
+
+        <activity
+            android:name=".MassaActivity"
+            android:exported="false"
+            android:label="@string/massa_titol">
+        </activity>
+
     </application>
 
 </manifest>

@@ -2,6 +2,8 @@ package cat.institut.dam.conversor
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.widget.Button
 
 /**
  * MainActivity — Pantalla d'inici (menú) del Conversor.
@@ -30,5 +32,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // TODO: Afegeix els tres botons del menú i obre les conversores amb Intent.
+
+        // Boto pantalla Temperatura
+        val botoTemperatura = findViewById<Button>(R.id.BotoTemperatura)
+        botoTemperatura.setOnClickListener {
+            val intent = Intent(this, TemperaturaActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Boto pantalla Longitud
+        val botoLongitud = findViewById<Button>(R.id.BotoLongitud)
+        botoLongitud.setOnClickListener {
+            val intent = Intent(this, LongitudActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Boto pantalla Massa
+        val botoMassa = findViewById<Button>(R.id.BotoMassa)
+        botoMassa.setOnClickListener {
+            val intent = Intent(this, MassaActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
