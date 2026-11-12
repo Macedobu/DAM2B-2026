@@ -1,5 +1,12 @@
 Demostrin la proposició de la secció del Petit Teorema de Fermat.
 
+---------------------------------------------------------------------------------------
+PROPOSICIÓ:
+Sigui p un nombre primer i sigui a un enter no divisible per p. Suposem que:
+a^n ≡ 1 (mod p)
+Aleshores, l’ordre de a mòdul p divideix n. En particular, l’ordre de a divideix p − 1.
+---------------------------------------------------------------------------------------
+
 p: És el nombre primer sobre el qual fem el mòdul (per exemple, p = 11).
 a: És la base, el nombre que estem elevant a potències (per exemple, a = 2).
 n: És un exponent QUALSEVOL que fa que la potència doni 1 mòdul p (és a dir, a^n ≡ 1 (mod p)).
@@ -10,46 +17,82 @@ r: És el residu de la divisió de n entre k.
 Exemple: 2^6 ≡ 1 (mod 7)
 
 Pas1: Dividim l'exponent n entre l'ordre k
+Dividend = Divisor * Quocient + Residu
 n = k * q + r
 
-Exemple: 6 = 3 * q + r = 3 * 2 + 0
+	Exemple
+	n = 6, k = ?
+
+	Busquem l'ordre (k) on residu = 1
+	2^1=2 2/7=0 r=2
+	2^2=4 4/7=0 r=4
+	2^3=8 8/7=1 r=1
+	n = 6, k = 3, q = ?, r = ?
+
+	Busquem "q" i "r" (divisio n/k)
+	6/3 q=2 r=0
+	n = 6, k = 3, q = 2, r = 0
+
+	Per tant:
+	n = k * q + r
+	6 = 3 * 2 + 0
 
 Pas2: Substituim aquesta divisió a la potència a^n
-Calculem a^n (mod p) fent servir l'expresió anterior:
-a^n = a^(k+q+r)
+Calculem a^n (mod p) fent servir l'expressió anterior:
+a^n = a^(k*q+r)
 
-Exemple: 2^6 = 2^(3 * 2 + 0) (mod 7)
+	Exemple
+	2^6 = 2^(3 * 2 + 0)
 
-Per les propoetats de les potències (exponents que es sumen passen a multiplicació):
+Separem l'exponent en dues parts per poder aïllar l'ordre (a^k):
+- La suma (+r) passa a multiplicar a fora (*a^r)
+- La multiplicació (k*q) passa a potència d'una potència ((a^k)^q)
+  per així al pas3 poder substituir a^k per 1 (a^k ≡ 1 (mod p))
 a^n = (a^k)^q * a^r
 
-Exemple: 2^6 = (2^3)^2 * 2^0 (mod 7)
+	Exemple
+	2^6 = (2^3)^2 * 2^0
 
 Pas3: Usem la informació que tenim
 Sabem per la definició d'ordre que a^k ≡ 1 (mod p)
 
-Si substituim a^k per 1, tenim (1)^q = 1
+Si substituim a^k per 1, tenim:
+a^n ≡ (1)^q * a^r (mod p)
+
+	Exemple
+	2^6 ≡ (1)^2 * 2^0 (mod 7)
 
 Per tant:
-a^n ≡ 1^q * a^r ≡ a^r (mod p)
+a^n ≡ (1)^q * a^r ≡ 1 * a^r ≡ a^r (mod p)
 
-Exemple: 2^6 ≡ (1)^2 * 2^r ≡ 1 * 2^r ≡ 2^r (mod 7)
+	Exemple
+	2^6 ≡ (1)^2 * 2^0 ≡ 1 * 2^0 ≡ 2^0 (mod 7)
 
 Pas4: Igualem i treiem la conclusió clau
-La proposició diu que a^n ≡ 1 (mod p). Com acavem de veure que a^n ≡ a^r (mod p), deduim que:
+La proposició diu que a^n ≡ 1 (mod p). Com acabem de veure que a^n ≡ a^r (mod p), deduïm que:
 a^r ≡ 1 (mod p)
 
-Exemple: 2^r ≡ 1 (mod 7)
+	Exemple
+	2^0 ≡ 1 (mod 7)
 
 A tenir en compte:
-k es l'exponent més petit de tots que dona 1
-Hem trobat un residu r que és més petit que k i que també dona 1
-L'única explicació és que el residu sigui 0
+k és l'exponent POSITIU més petit que fa que a^k ≡ 1 (mod p).
+Acabem de veure que l'exponent r és més petit que k (0 <= r < k) i també fa que a^r ≡ 1 (mod p).
+Com que cap número positiu més petit que k pot aconseguir-ho, l'única opció possible és que l'exponent sigui r = 0.
 
 Pas5: Final de la demostració
-Si el residu r és 0, la divisio del pas1 queda exacta:
+Si el residu r és 0, la divisió del pas1 queda exacta:
 n = k * q
 
-Exemple: 6 = 3 * 2
+	Exemple
+	6 = 3 * 2
 
-Això demostra que l'ordre k (3) divideix l'exponent n (6)
+Això demostra que l'ordre k divideix l'exponent n (k | n)
+
+	Exemple
+	3 divideix 6 (3 | 6)
+* 3 | 6 = 3 és divisor de 6 = 3 cap un número exacte de vegades dins de 6
+
+Cas particular (Petit Teorema de Fermat):
+Sabem que a^(p - 1) ≡ 1 (mod p). Si fem servir n = p - 1 en aquesta mateixa demostració,
+queda provat que l'ordre k també divideix p - 1 (k | p - 1)
