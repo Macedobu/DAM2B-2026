@@ -19,6 +19,12 @@ public class LiniaComanda {
         this.preuUnitari = preuUnitari;
     }
     
+    // Constructor amb producteId i quantitat
+    public LiniaComanda(int producteId, int quantitat) {
+        this.producteId = producteId;
+        this.quantitat = quantitat;
+    }
+    
     //Getters i Setters
     public int getId() {return id;}
 

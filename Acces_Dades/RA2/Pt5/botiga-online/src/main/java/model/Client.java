@@ -15,6 +15,12 @@ public class Client {
         this.correu = correu;
     }
     
+    // Constructor sense id
+    public Client(String nom, String correu) {
+        this.nom = nom;
+        this.correu = correu;
+    }
+    
     //Getters i Setters
     public int getId() {return id;}
 

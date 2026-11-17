@@ -128,7 +128,7 @@ public class BotigaOnline {
                             System.out.print("Nou estoc: ");
                             int nouEstoc = sc.nextInt();
                             sc.nextLine();
-                            producteDao.actualitzar(new Producte(idAct, nouNom, nouPreu, nouEstoc));
+                            producteDao.actualitzar(new Producte(idUpd, nouNom, nouPreu, nouEstoc));
                             break;
                             
                         case 4:
@@ -198,13 +198,13 @@ public class BotigaOnline {
                             // Actualitzar client
                             System.out.println("\n--- ACTUALITZAR CLIENT ---");
                             System.out.print("ID del client: ");
-                            int idAct = sc.nextInt();
+                            int idUpd = sc.nextInt();
                             sc.nextLine();
                             System.out.print("Nou nom: ");
                             String nouNom = sc.nextLine();
                             System.out.print("Nou correu: ");
                             String nouCorreu = sc.nextLine();
-                            clientDao.actualitzar(new Client(idAct, nouNom, nouCorreu));
+                            clientDao.actualitzar(new Client(idUpd, nouNom, nouCorreu));
                             break;
                             
                         case 4:

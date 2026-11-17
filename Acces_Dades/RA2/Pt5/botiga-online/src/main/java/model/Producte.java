@@ -17,6 +17,13 @@ public class Producte {
         this.estoc = estoc;
     }
     
+    // Constructor sense id
+    public Producte( String nom, double preu, int estoc) {
+        this.nom = nom;
+        this.preu = preu;
+        this.estoc = estoc;
+    }
+    
     //Getters i Setters
     public int getId() {return id;}
 

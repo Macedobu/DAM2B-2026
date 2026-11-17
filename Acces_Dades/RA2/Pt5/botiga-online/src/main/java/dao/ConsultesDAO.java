@@ -11,7 +11,7 @@ public class ConsultesDAO {
                 "p.nom AS producte_nom, l.quantitat, l.preuUnitari " +
                 "FROM Comandes c " +
                 "JOIN LiniesComanda l ON c.id = l.comanda_id " +
-                "JOIN Productes p ON l.producte_id = p.id" +
+                "JOIN Productes p ON l.producte_id = p.id " +
                 "WHERE c.client_id = ?";
         
         try (Connection con = Connexio.getConnection();
