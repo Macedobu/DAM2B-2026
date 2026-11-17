@@ -45,7 +45,7 @@ public class ProducteDAO {
         return productes;
     }
     
-    // ACTUALITZAR PRODUCTES
+    // ACTUALITZAR PRODUCTE
     public void actualitzar(Producte producte) throws SQLException {
         String sql = "UPDATE Productes SET nom = ?, preu = ?, estoc = ? WHERE id = ?";
         
