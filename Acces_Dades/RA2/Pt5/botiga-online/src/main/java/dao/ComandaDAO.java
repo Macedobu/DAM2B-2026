@@ -69,17 +69,28 @@ public class ComandaDAO {
                     }
                     
                     // Reduim l'estoc
-                    String sqlUpdateEstoc = "UPDATE Productes SET estoc = estoc - ? WHERE id = ?";
+                    /* Fem comprovació de l'estoc amb "AND estoc >= ?" per evitar que quedi l'estoc en
+                    negatiu si l'usuari entra 2 vegades el mateix producte dins de la mateixa comanda */
+                    String sqlUpdateEstoc = "UPDATE Productes SET estoc = estoc - ? WHERE id = ? AND estoc >= ?";
                     try (PreparedStatement psUpdEstoc = con.prepareStatement(sqlUpdateEstoc)) {
                         psUpdEstoc.setInt(1, linia.getQuantitat());
                         psUpdEstoc.setInt(2, linia.getProducteId());
-                        psUpdEstoc.executeUpdate();
+                        psUpdEstoc.setInt(3, linia.getQuantitat());
+                        
+                        // Gestió de l'error si l'estoc es insuficient
+                        int updateRealitzat = psUpdEstoc.executeUpdate();
+                        if (updateRealitzat == 0) {
+                            throw new SQLException("Estoc insuficient per al producte amb ID: " + linia.getProducteId());
+                        }
                     }
                     totalComanda += linia.getPreuUnitari() * linia.getQuantitat();
                 }
                 
                 // Creem un SAVEPOINT abans d'aplicar els descomptes
                 Savepoint spDescompte = con.setSavepoint("DespresLinies");
+                
+                //Guardem totalComanda sense descompte per restaurar el valor de la variable si es fa rollback
+                double totalSenseDescompte = totalComanda;
                 
                 try {
                     
@@ -109,6 +120,7 @@ public class ComandaDAO {
                     
                     // Si falla el descompte, fem rollback
                     con.rollback(spDescompte);
+                    totalComanda = totalSenseDescompte;
                     System.out.println("Error. No s'han aplicat els descomptes");
                 }
                 

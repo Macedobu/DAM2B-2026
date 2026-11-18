@@ -17,6 +17,13 @@ public class Descompte {
         this.valor = valor;
     }
     
+    // Constructor amb tots els parametres
+    public Descompte(int producteId, String tipus, double valor) {
+        this.producteId = producteId;
+        this.tipus = tipus;
+        this.valor = valor;
+    }
+    
     //Getters i Setters
     public int getId() {return id;}
 

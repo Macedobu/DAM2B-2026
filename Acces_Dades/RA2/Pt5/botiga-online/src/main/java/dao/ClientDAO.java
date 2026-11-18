@@ -54,8 +54,15 @@ public class ClientDAO {
             ps.setString(2, client.getCorreu());
             ps.setInt(3, client.getId());
             
-            ps.executeUpdate();
-            System.out.println("Client actualitzat correctament.");
+            /* Ens assegurem que s'ha trobat l'id. 
+            Si executeUpdate retorna 1, l'ha trobat.
+            Si retorna 0, no */
+            int updateRealitzat = ps.executeUpdate();
+            if (updateRealitzat > 0) {
+                System.out.println("Client actualitzat correctament.");
+            } else {
+                System.out.println("No s'ha trobat cap client amb aquesta ID");
+            }
         }
     }
     
@@ -68,8 +75,15 @@ public class ClientDAO {
             
             ps.setInt(1, id);
 
-            ps.executeUpdate();
-            System.out.println("Client eliminat correctament.");
+            /* Ens assegurem que s'ha trobat l'id. 
+            Si executeUpdate retorna 1, l'ha trobat.
+            Si retorna 0, no */
+            int updateRealitzat = ps.executeUpdate();
+            if (updateRealitzat > 0) {
+                System.out.println("Client eliminat correctament.");
+            } else {
+                System.out.println("No s'ha trobat cap client amb aquesta ID");
+            }
         }
     }
 }

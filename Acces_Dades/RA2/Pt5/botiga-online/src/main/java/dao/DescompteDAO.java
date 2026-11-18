@@ -45,7 +45,7 @@ public class DescompteDAO {
         return descomptes;
     }
     
-    // ACTUALITZAR DESCOMPTES
+    // ACTUALITZAR DESCOMPTE
     public void actualitzar(Descompte descompte) throws SQLException {
         String sql = "UPDATE Descomptes SET producte_id = ?, tipus = ?, valor = ? WHERE id = ?";
         
@@ -57,8 +57,15 @@ public class DescompteDAO {
             ps.setDouble(3, descompte.getValor());
             ps.setInt(4, descompte.getId());
             
-            ps.executeUpdate();
-            System.out.println("Descompte actualitzat correctament.");
+            /* Ens assegurem que s'ha trobat l'id. 
+            Si executeUpdate retorna 1, l'ha trobat.
+            Si retorna 0, no */
+            int updateRealitzat = ps.executeUpdate();
+            if (updateRealitzat > 0) {
+                System.out.println("Descompte actualitzat correctament.");
+            } else {
+                System.out.println("No s'ha trobat cap descompte amb aquesta ID");
+            }
         }
     }
     
@@ -71,8 +78,15 @@ public class DescompteDAO {
             
             ps.setInt(1, id);
 
-            ps.executeUpdate();
-            System.out.println("Descompte eliminat correctament.");
+            /* Ens assegurem que s'ha trobat l'id. 
+            Si executeUpdate retorna 1, l'ha trobat.
+            Si retorna 0, no */
+            int updateRealitzat = ps.executeUpdate();
+            if (updateRealitzat > 0) {
+                System.out.println("Descompte eliminat correctament.");
+            } else {
+                System.out.println("No s'ha trobat cap descompte amb aquesta ID");
+            }
         }
     }
 }

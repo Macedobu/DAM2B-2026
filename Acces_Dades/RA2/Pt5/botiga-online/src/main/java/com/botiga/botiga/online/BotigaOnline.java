@@ -7,27 +7,39 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+// Imports per forçar UTF-8
+import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
+
 public class BotigaOnline {
     
-    private static Scanner sc = new Scanner(System.in);
+    // A l'escaner afegeixo el parametre "StandardCharsets.UTF_8" per forçar UTF-8
+    private static Scanner sc = new Scanner(System.in, StandardCharsets.UTF_8);
         
     // Instancies dels DAO
     private static ClientDAO clientDao = new ClientDAO();
     private static ProducteDAO producteDao = new ProducteDAO();
+    private static DescompteDAO descompteDao = new DescompteDAO();
     private static ComandaDAO comandaDao = new ComandaDAO();
     private static ConsultesDAO consultesDao = new ConsultesDAO();
 
     
     // MENÚ PRINCIPAL
     public static void main(String[] args) {
+        
+        // Forcem  UTF-8
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
+        
+        //Comencem amb el menú principal de la botiga
         int opcio = -1;
         
         do {
             System.out.println("\n===== BOTIGA ONLINE =====");
             System.out.println("1. Gestionar Productes");
             System.out.println("2. Gestionar Clients");
-            System.out.println("3. Crear Comanda");
-            System.out.println("4. Llistar Comandes");
+            System.out.println("3. Gestionar Descomptes");
+            System.out.println("4. Crear Comanda");
+            System.out.println("5. Llistar Comandes");
             System.out.println("0. Sortir");
             System.out.print("Tria una opció: ");
             
@@ -42,16 +54,21 @@ public class BotigaOnline {
                         break;
                         
                     case 2:
-                        // Cridar ClientDAO
+                        // Gestionar clients
                         gestionarClients();
                         break;
                         
                     case 3:
+                        // Gestionar descomptes
+                        gestionarDescomptes();
+                        break;
+                        
+                    case 4:
                         // Crear Comanda amb transacció
                         crearComanda();
                         break;
                         
-                    case 4:
+                    case 5:
                         // Consultar JOIN
                         llistarComandes();
                         break;
@@ -233,6 +250,89 @@ public class BotigaOnline {
         } while (opcio != 0);
     }
     
+    private static void gestionarDescomptes() {
+        int opcio = -1;
+        do {
+            System.out.println("\n--- GESTIÓ DE DESCOMPTES ---");
+            System.out.println("1. Inserir descompte");
+            System.out.println("2. Llistar descomptes");
+            System.out.println("3. Actualitzar descompte");
+            System.out.println("4. Eliminar descompte");
+            System.out.println("0. Tornar al menú principal");
+            System.out.print("Tria una opció: ");
+            
+            if (sc.hasNextInt()) {
+                opcio = sc.nextInt();
+                sc.nextLine();
+                
+                try {
+                    switch (opcio) {
+                        case 1:
+                            // Inserir descompte
+                            System.out.println("\n--- INSERIR NOU DESCOMPTE ---");
+                            System.out.print("ID del producte: ");
+                            int prodId = sc.nextInt();
+                            sc.nextLine();
+                            System.out.print("Tipus(% o €): ");
+                            String tipus = sc.nextLine();
+                            System.out.print("Valor: ");
+                            double valor = sc.nextDouble();
+                            sc.nextLine();
+                            descompteDao.inserir(new Descompte(prodId, tipus, valor));
+                            break;
+                            
+                        case 2:
+                            // Llistar descomptes
+                            List<Descompte> descomptes = descompteDao.llistar();
+                            System.out.println("\n--- LLISTA DE DESCOMPTES ---");
+                            for (Descompte d : descomptes) {
+                                System.out.println(d);
+                            }
+                            break;
+                            
+                        case 3:
+                            // Actualitzar descompte
+                            System.out.println("\n--- ACTUALITZAR DESCOMPTE ---");
+                            System.out.print("ID del descompte: ");
+                            int idUpd = sc.nextInt();
+                            sc.nextLine();
+                            System.out.print("Nou ID del producte: ");
+                            int nouProdId = sc.nextInt();
+                            sc.nextLine();
+                            System.out.print("Nou tipus (% o €): ");
+                            String nouTipus = sc.nextLine();
+                            System.out.print("Nou valor: ");
+                            double nouValor = sc.nextDouble();
+                            sc.nextLine();
+                            descompteDao.actualitzar(new Descompte(idUpd, nouProdId, nouTipus, nouValor));
+                            break;
+                            
+                        case 4:
+                            // Eliminar descompte
+                            System.out.println("\n--- ELIMINAR DESCOMPTE ---");
+                            System.out.print("ID del descompte: ");
+                            int idDel = sc.nextInt();
+                            sc.nextLine();
+                            descompteDao.eliminar(idDel);
+                            break;
+                            
+                        case 0:
+                            System.out.println("Tornant...");
+                            break;
+                            
+                        default:
+                            System.out.println("Opció no vàlida.");
+                    }
+                } catch (SQLException e) {
+                    System.out.println("Error amb la base de dades: " + e.getMessage());
+                }
+            } else {
+                System.out.println("Error. Introdueix un número vàlid.");
+                sc.next();
+            }
+        } while (opcio != 0);
+    }
+    
     // MÈTODE CREAR COMANDES
     private static void crearComanda() {
         System.out.println("\n--- CREAR NOVA COMANDA ---");
@@ -252,8 +352,19 @@ public class BotigaOnline {
             
             linies.add(new LiniaComanda(producteId, quantitat));
             
-            System.out.print("Vols afegir un altre producte (s/n): ");
-            continuar = sc.nextLine().toUpperCase().charAt(0);
+            // Preguntem a l'usuari si vol afegir més productes
+            String resposta;
+            do {
+                System.out.print("Vols afegir un altre producte (s/n): ");
+                resposta = sc.nextLine().trim().toUpperCase();
+                
+                // Ens assegurem que l'usuari ha escrit un valor vàlid
+                if (!resposta.equals("S") && !resposta.equals("N")) {
+                    System.out.println("Error. Resposta no vàlida. Introdueix 's' o 'n'.");
+                }
+            } while (!resposta.equals("S") && !resposta.equals("N"));
+            
+            continuar = resposta.charAt(0);
         }
         
         try {

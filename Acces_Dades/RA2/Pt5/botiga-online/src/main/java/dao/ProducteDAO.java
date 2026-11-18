@@ -57,8 +57,15 @@ public class ProducteDAO {
             ps.setInt(3, producte.getEstoc());
             ps.setInt(4, producte.getId());
             
-            ps.executeUpdate();
-            System.out.println("Producte actualitzat correctament.");
+            /* Ens assegurem que s'ha trobat l'id. 
+            Si executeUpdate retorna 1, l'ha trobat.
+            Si retorna 0, no */
+            int updateRealitzat = ps.executeUpdate();
+            if (updateRealitzat > 0) {
+                System.out.println("Producte actualitzat correctament.");
+            } else {
+                System.out.println("No s'ha trobat cap producte amb aquesta ID");
+            }
         }
     }
     
@@ -71,8 +78,15 @@ public class ProducteDAO {
             
             ps.setInt(1, id);
 
-            ps.executeUpdate();
-            System.out.println("Producte eliminat correctament.");
+            /* Ens assegurem que s'ha trobat l'id. 
+            Si executeUpdate retorna 1, l'ha trobat.
+            Si retorna 0, no */
+            int updateRealitzat = ps.executeUpdate();
+            if (updateRealitzat > 0) {
+                System.out.println("Producte eliminat correctament.");
+            } else {
+                System.out.println("No s'ha trobat cap producte amb aquesta ID");
+            }
         }
     }
 }
