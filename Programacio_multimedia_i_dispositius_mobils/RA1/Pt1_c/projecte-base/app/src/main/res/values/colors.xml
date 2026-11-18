@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PROJECTE BASE 1C — paleta de colors de l'aplicació (tema clar).
+
+    Tots els colors de la interfície es defineixen aquí i es referencien
+    des de la resta de fitxers amb @color/nom_del_color.
+    No s'escriuen codis de color (#RRGGBB) directament als layouts.
+
+    La versió del tema nocturn es defineix a res/values-night/colors.xml,
+    amb els MATEIXOS noms de color i valors escurs.
+-->
+<resources>
+
+    <!-- Marca -->
+    <color name="primary">#FF6750A4</color>
+    <color name="primary_dark">#FF4F378B</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="primary_container">#FFEADDFF</color>
+    <color name="on_primary_container">#FF21005D</color>
+
+    <!-- Superfície -->
+    <color name="background">#FFFEF7FF</color>
+    <color name="surface">#FFFEF7FF</color>
+    <color name="on_surface">#FF1D1B20</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FF1D1B20</color>
+    <color name="text_secondary">#FF49454F</color>
+
+    <!-- Monograma (inicials del contacte) -->
+    <color name="monograma_background">#FFEADDFF</color>
+    <color name="monograma_text">#FF21005D</color>
+
+    <!-- Avís / estat buit -->
+    <color name="avis_background">#FFFFF4E5</color>
+    <color name="avis_text">#FF7A5900</color>
+
+    <!-- Error -->
+    <color name="error">#FFB3261E</color>
+    <color name="on_error">#FFFFFFFF</color>
+
+    <!-- Divisor -->
+    <color name="divider">#FFCAC4D0</color>
+
+</resources>

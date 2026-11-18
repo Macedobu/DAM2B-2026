@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PROJECTE BASE 1C — textos de l'aplicació (anglès).
+-->
+<resources>
+
+    <string name="app_name">Contacts</string>
+
+    <!-- Pantalla principal -->
+    <string name="titol_principal">My contacts</string>
+    <string name="cerca_hint">Search by name, city or email</string>
+    <string name="btn_actualitza">Refresh</string>
+    <string name="txt_buit">There are no contacts in the list</string>
+    <string name="txt_buit_cerca">No contact matches the search</string>
+    <string name="avis_dades_locals">No connection: showing local data</string>
+    <string name="error_carrega">Contacts could not be loaded</string>
+
+    <!-- Pantalla de detall -->
+    <string name="lbl_email">Email</string>
+    <string name="lbl_telefon">Phone</string>
+    <string name="lbl_adreca">Address</string>
+    <string name="lbl_web">Website</string>
+    <string name="lbl_favorit">Favourite</string>
+    <string name="btn_trucar">Call</string>
+    <string name="btn_correu">Email</string>
+    <string name="btn_mapa">Map</string>
+    <string name="btn_web">Web</string>
+    <string name="btn_alarma">Alarm</string>
+    <string name="btn_galeria">Gallery</string>
+    <string name="desc_foto">Contact photo</string>
+    <string name="error_contacte">The contact was not found</string>
+    <string name="error_app_no_disponible">No app is available</string>
+
+    <!-- Permisos y notificaciones -->
+    <string name="permis_denegada">Permission denied: notifications will not be shown</string>
+    <string name="notificacio_titol">Contacts updated</string>
+    <string name="notificacio_text">%1$d contacts have been loaded</string>
+    <string name="canal_notificacions">Contacts</string>
+
+    <!-- Alarma -->
+    <string name="alarma_missatge">Call back with %1$s</string>
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permís normal: cal declarar-lo per poder fer peticions HTTP. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+        A partir d'Android 13 (API 33) cal demanar permís en temps d'execució
+        per poder mostrar notificacions. En versions anteriors no cal.
+    -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Contactes">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            TODO 7: declara aquí la pantalla de detall (ContacteDetallActivity).
+            Recorda: una pantalla que només s'obre des de l'app NO ha de ser
+            exportable: android:exported="false".
+        -->
+
+    </application>
+
+</manifest>

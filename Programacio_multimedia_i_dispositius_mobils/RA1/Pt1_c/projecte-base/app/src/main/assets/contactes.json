@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Marta Ferrer",
+    "username": "mferrer",
+    "email": "marta.ferrer@example.cat",
+    "phone": "600 111 222",
+    "website": "martaferrer.cat",
+    "address": {
+      "street": "Carrer del Sol, 12",
+      "suite": "",
+      "city": "Barcelona",
+      "zipcode": "08001",
+      "geo": { "lat": "41.3874", "lng": "2.1686" }
+    },
+    "company": { "name": "Editorial Mar", "catchPhrase": "", "bs": "" }
+  },
+  {
+    "id": 2,
+    "name": "Joan Puig",
+    "username": "jpuig",
+    "email": "joan.puig@example.cat",
+    "phone": "600 333 444",
+    "website": "joanpuig.cat",
+    "address": {
+      "street": "Avinguda del Port, 45",
+      "suite": "3r",
+      "city": "Tarragona",
+      "zipcode": "43001",
+      "geo": { "lat": "41.1189", "lng": "1.2445" }
+    },
+    "company": { "name": "Port Logistics", "catchPhrase": "", "bs": "" }
+  },
+  {
+    "id": 3,
+    "name": "Laia Camps",
+    "username": "lcamps",
+    "email": "laia.camps@example.cat",
+    "phone": "600 555 666",
+    "website": "laiacamps.cat",
+    "address": {
+      "street": "Carrer Major, 7",
+      "suite": "",
+      "city": "Girona",
+      "zipcode": "17001",
+      "geo": { "lat": "41.9794", "lng": "2.8214" }
+    },
+    "company": { "name": "Clínica Camps", "catchPhrase": "", "bs": "" }
+  },
+  {
+    "id": 4,
+    "name": "Pau Riba",
+    "username": "priba",
+    "email": "pau.riba@example.cat",
+    "phone": "600 777 888",
+    "website": "pauriba.cat",
+    "address": {
+      "street": "Carrer Nou, 21",
+      "suite": "2n",
+      "city": "Lleida",
+      "zipcode": "25001",
+      "geo": { "lat": "41.6176", "lng": "0.6200" }
+    },
+    "company": { "name": "Riba Assessors", "catchPhrase": "", "bs": "" }
+  },
+  {
+    "id": 5,
+    "name": "Anna Sala",
+    "username": "asala",
+    "email": "anna.sala@example.cat",
+    "phone": "600 999 000",
+    "website": "annasala.cat",
+    "address": {
+      "street": "Passeig de Gràcia, 88",
+      "suite": "5è",
+      "city": "Barcelona",
+      "zipcode": "08008",
+      "geo": { "lat": "41.3954", "lng": "2.1620" }
+    },
+    "company": { "name": "Sala Disseny", "catchPhrase": "", "bs": "" }
+  },
+  {
+    "id": 6,
+    "name": "Oriol Mas",
+    "username": "omas",
+    "email": "oriol.mas@example.cat",
+    "phone": "601 222 333",
+    "website": "oriolmas.cat",
+    "address": {
+      "street": "Carrer de la Pau, 3",
+      "suite": "",
+      "city": "Sabadell",
+      "zipcode": "08201",
+      "geo": { "lat": "41.5486", "lng": "2.1074" }
+    },
+    "company": { "name": "Mas i Fills", "catchPhrase": "", "bs": "" }
+  },
+  {
+    "id": 7,
+    "name": "Clara Vidal",
+    "username": "cvidal",
+    "email": "clara.vidal@example.cat",
+    "phone": "601 444 555",
+    "website": "claravidal.cat",
+    "address": {
+      "street": "Rambla de Catalunya, 120",
+      "suite": "1r",
+      "city": "Barcelona",
+      "zipcode": "08008",
+      "geo": { "lat": "41.3897", "lng": "2.1655" }
+    },
+    "company": { "name": "Estudi Vidal", "catchPhrase": "", "bs": "" }
+  },
+  {
+    "id": 8,
+    "name": "Marc Oliver",
+    "username": "moliver",
+    "email": "marc.oliver@example.cat",
+    "phone": "601 666 777",
+    "website": "marcoliver.cat",
+    "address": {
+      "street": "Carrer de la Plana, 14",
+      "suite": "",
+      "city": "Castelló",
+      "zipcode": "12001",
+      "geo": { "lat": "39.9864", "lng": "-0.0513" }
+    },
+    "company": { "name": "Oliver Export", "catchPhrase": "", "bs": "" }
+  },
+  {
+    "id": 9,
+    "name": "Aina Costa",
+    "username": "acosta",
+    "email": "aina.costa@example.cat",
+    "phone": "601 888 999",
+    "website": "ainacosta.cat",
+    "address": {
+      "street": "Carrer del Mercat, 30",
+      "suite": "4t",
+      "city": "Manresa",
+      "zipcode": "08240",
+      "geo": { "lat": "41.8955", "lng": "1.5480" }
+    },
+    "company": { "name": "Costa Distribucions", "catchPhrase": "", "bs": "" }
+  },
+  {
+    "id": 10,
+    "name": "Roger Quintana",
+    "username": "rquintana",
+    "email": "roger.quintana@example.cat",
+    "phone": "602 000 111",
+    "website": "rogerquintana.cat",
+    "address": {
+      "street": "Avinguda del Centre, 6",
+      "suite": "",
+      "city": "Reus",
+      "zipcode": "43201",
+      "geo": { "lat": "41.1544", "lng": "1.1085" }
+    },
+    "company": { "name": "Quintana Taller", "catchPhrase": "", "bs": "" }
+  }
+]

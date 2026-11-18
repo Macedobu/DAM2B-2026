@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PROJECTE BASE 1C — textos de l'aplicació (català, idioma per defecte).
+
+    Els textos no s'escriuen mai directament als layouts: es posen aquí i es
+    referencien amb @string/nom_del_text.
+-->
+<resources>
+
+    <string name="app_name">Contactes</string>
+
+    <!-- Pantalla principal -->
+    <string name="titol_principal">Els meus contactes</string>
+    <string name="cerca_hint">Cerca per nom, ciutat o correu</string>
+    <string name="btn_actualitza">Actualitza</string>
+    <string name="txt_buit">No hi ha cap contacte a la llista</string>
+    <string name="txt_buit_cerca">Cap contacte coincideix amb la cerca</string>
+    <string name="avis_dades_locals">Sense connexió: es mostren les dades locals</string>
+    <string name="error_carrega">No s\'han pogut carregar els contactes</string>
+
+    <!-- Pantalla de detall -->
+    <string name="lbl_email">Correu electrònic</string>
+    <string name="lbl_telefon">Telèfon</string>
+    <string name="lbl_adreca">Adreça</string>
+    <string name="lbl_web">Pàgina web</string>
+    <string name="lbl_favorit">Favorit</string>
+    <string name="btn_trucar">Trucar</string>
+    <string name="btn_correu">Escriu</string>
+    <string name="btn_mapa">Mapa</string>
+    <string name="btn_web">Web</string>
+    <string name="btn_alarma">Alarma</string>
+    <string name="btn_galeria">Galeria</string>
+    <string name="desc_foto">Foto del contacte</string>
+    <string name="error_contacte">No s\'ha trobat el contacte</string>
+    <string name="error_app_no_disponible">No hi ha cap aplicació disponible</string>
+
+    <!-- Permisos i notificacions -->
+    <string name="permis_denegada">Permís denegat: no es mostraran notificacions</string>
+    <string name="notificacio_titol">Contactes actualitzats</string>
+    <string name="notificacio_text">S\'han carregat %1$d contactes</string>
+    <string name="canal_notificacions">Contactes</string>
+
+    <!-- Alarma -->
+    <string name="alarma_missatge">Crida amb %1$s</string>
+
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PROJECTE BASE 1C — textos de l'aplicació (castellà).
+-->
+<resources>
+
+    <string name="app_name">Contactos</string>
+
+    <!-- Pantalla principal -->
+    <string name="titol_principal">Mis contactos</string>
+    <string name="cerca_hint">Buscar por nombre, ciudad o correo</string>
+    <string name="btn_actualitza">Actualizar</string>
+    <string name="txt_buit">No hay ningún contacto en la lista</string>
+    <string name="txt_buit_cerca">Ningún contacto coincide con la búsqueda</string>
+    <string name="avis_dades_locals">Sin conexión: se muestran los datos locales</string>
+    <string name="error_carrega">No se han podido cargar los contactos</string>
+
+    <!-- Pantalla de detall -->
+    <string name="lbl_email">Correo electrónico</string>
+    <string name="lbl_telefon">Teléfono</string>
+    <string name="lbl_adreca">Dirección</string>
+    <string name="lbl_web">Página web</string>
+    <string name="lbl_favorit">Favorito</string>
+    <string name="btn_trucar">Llamar</string>
+    <string name="btn_correu">Escribir</string>
+    <string name="btn_mapa">Mapa</string>
+    <string name="btn_web">Web</string>
+    <string name="btn_alarma">Alarma</string>
+    <string name="btn_galeria">Galería</string>
+    <string name="desc_foto">Foto del contacto</string>
+    <string name="error_contacte">No se ha encontrado el contacto</string>
+    <string name="error_app_no_disponible">No hay ninguna aplicación disponible</string>
+
+    <!-- Permisos y notificaciones -->
+    <string name="permis_denegada">Permiso denegado: no se mostrarán notificaciones</string>
+    <string name="notificacio_titol">Contactos actualizados</string>
+    <string name="notificacio_text">Se han cargado %1$d contactos</string>
+    <string name="canal_notificacions">Contactos</string>
+
+    <!-- Alarma -->
+    <string name="alarma_missatge">Llamar con %1$s</string>
+
+</resources>
