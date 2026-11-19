@@ -13,7 +13,7 @@
 | RA | Eines / Tecnologies |
 | :--- | :--- |
 | [RA1: Maneig de fitxers](./RA1) | Java (`java.io`, `java.nio`), XML (DOM/SAX), JSON (Gson/Jackson), CSV |
-| [RA2: Connectors i BDD relacionals] | JDBC, SQL, MySQL, PostgreSQL |
+| [RA2: Connectors i BDD relacionals](./RA2 | JDBC, SQL, MySQL, PostgreSQL |
 | [RA3: Mapeig Objecte-Relacional (ORM)] | JPA, Hibernate |
 | [RA4: Bases de dades Objecte-Relacionals] | ObjectDB, db4o |
 | [RA5: Bases de dades NoSQL i XML] | MongoDB, BaseX, Redis |
