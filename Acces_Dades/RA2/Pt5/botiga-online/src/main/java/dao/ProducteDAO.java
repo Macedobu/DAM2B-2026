@@ -30,8 +30,8 @@ public class ProducteDAO {
         String sql = "SELECT * FROM Productes";
         
         try (Connection con = Connexio.getConnection();
-                Statement st = con.createStatement();
-                ResultSet rs = st.executeQuery(sql)) {
+                PreparedStatement ps = con.prepareStatement(sql);
+                ResultSet rs = ps.executeQuery()) {
             
             while (rs.next()) {
                 Producte p = new Producte();

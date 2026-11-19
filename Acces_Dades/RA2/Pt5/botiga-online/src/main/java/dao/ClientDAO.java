@@ -29,8 +29,8 @@ public class ClientDAO {
         String sql = "SELECT * FROM Clients";
         
         try (Connection con = Connexio.getConnection();
-                Statement st = con.createStatement();
-                ResultSet rs = st.executeQuery(sql)) {
+                PreparedStatement ps = con.prepareStatement(sql);
+                ResultSet rs = ps.executeQuery()) {
             
             while (rs.next()) {
                 Client c = new Client();
