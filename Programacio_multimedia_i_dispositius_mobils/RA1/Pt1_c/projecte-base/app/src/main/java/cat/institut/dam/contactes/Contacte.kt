@@ -14,20 +14,23 @@ data class Contacte(
     val codiPostal: String,
     val latitud: Double,
     val longitud: Double
-){
+) {
     // Separem i agafem la primera inicial dels 2 primers noms
     val inicials: String
-        get() = nom.trim() // Retalla els espais al principi i final de l'string
-            .split("\\s+".toRegex()) // Divideix el text en array tenint en compte espais i tabulacions
-            .filter {it.isNotEmpty()} // Elimina possibles elements buits formats a l'split
-            .take(2) // Agafa 2 primeres paraules (nom i primer cognom)
-            .map { it.first() } // agafa la inicial d'aquestes 2 paraules
-            .joinToString("") // Unifica el resultat en un String
-            .uppercase() // Ho passa a majuscules
+        get() = nom.trim() // Retallem els espais al principi i final de l'string
+            .split("\\s+".toRegex()) // Dividim el text en array tenint en compte espais i tabulacions
+            .filter { it.isNotBlank() } // Filtrem elements buits o amb espais formats a l'split
+            .take(2) // Agafem 2 primeres paraules (nom i primer cognom)
+            .mapNotNull { it.firstOrNull() } // Agafem la inicial d'aquestes 2 paraules. Si només n'hi ha 1 agafa aquesta i null. Despres mapNotNull filtra els valors null
+            .joinToString("") // Unifiquem el resultat en un String
+            .uppercase() // Ho passem a majuscules
 
     // Adreça completa
     val adreçaCompleta: String
-        get() = "$carrer, $ciutat, $codiPostal"
+        get() = listOf(carrer, ciutat, codiPostal) // Creem una llista amb els 3 camps
+            .map { it.trim() } // Netejem espais
+            .filter { it.isNotBlank() } // Filtrem elements buits o amb espais
+            .joinToString(", ") // Unifiquem el resultat en un String i els separem amb una coma
 
     // Url de l'avatar
     val urlAvatar: String
@@ -35,8 +38,8 @@ data class Contacte(
 
     companion object {
         fun desDeJson(json: JSONObject): Contacte {
-            val adreça = json.getJSONObject("address")
-            val geo = adreça.getJSONObject("geo")
+            val adreca = json.getJSONObject("address")
+            val geo = adreca.getJSONObject("geo")
             return Contacte(
                 id = json.getInt("id"),
                 nom = json.getString("name"),
@@ -44,9 +47,9 @@ data class Contacte(
                 email = json.getString("email"),
                 telefon = json.getString("phone"),
                 web = json.getString("website"),
-                carrer = adreça.getString("street"),
-                ciutat = adreça.getString("city"),
-                codiPostal = adreça.getString("zipcode"),
+                carrer = adreca.getString("street"),
+                ciutat = adreca.getString("city"),
+                codiPostal = adreca.getString("zipcode"),
                 latitud = geo.optString("lat").toDoubleOrNull() ?: 0.0,
                 longitud = geo.optString("lng").toDoubleOrNull() ?: 0.0
             )
