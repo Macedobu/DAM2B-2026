@@ -10,10 +10,10 @@ import java.net.URL
 object ContactesService {
 
     // Declarem l'adreça d'on treurem els contactes
-    private const val URL_CONTACTES = "https://jsonplaceholder.typicode.com/users"
+    const val URL_CONTACTES = "https://jsonplaceholder.typicode.com/users"
 
     // Metode per realitzar la connexio
-    fun realitzarConnexio(url: String): HttpURLConnection {
+    private fun realitzarConnexio(url: String): HttpURLConnection {
         val connexio = URL(url).openConnection() as HttpURLConnection
         try {
             connexio.requestMethod = "GET"
@@ -61,10 +61,12 @@ object ContactesService {
     // Baixem una imatge de la web
     fun baixaImatge(url: String?): Bitmap? {
         if (url.isNullOrBlank()) return null
-        val connexio = realitzarConnexio(url)
-        try {
-            val bitmap = connexio.inputStream.use { BitmapFactory.decodeStream(it) }
-            return bitmap
-        } finally { connexio.disconnect() }
+        try { // Si la conexió falla retornarem null
+            val connexio = realitzarConnexio(url)
+            try {
+                val bitmap = connexio.inputStream.use { BitmapFactory.decodeStream(it) }
+                return bitmap
+            } finally { connexio.disconnect() }
+        } catch (e: Exception) { return null }
     }
 }
