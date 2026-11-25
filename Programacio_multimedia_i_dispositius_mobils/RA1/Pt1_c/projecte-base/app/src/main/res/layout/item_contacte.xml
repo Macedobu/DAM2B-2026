@@ -5,9 +5,10 @@
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:background="@color/background"
+    android:background="?attr/selectableItemBackground"
     android:padding="16dp">
 
+    <!-- Cercle amb inicials del nom -->
     <TextView
         android:id="@+id/tvInicials"
         style="@style/TextMonograma"
@@ -17,6 +18,7 @@
         android:gravity="center"
         tools:text="MF" />
 
+    <!-- Nom ciutat i correu -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -53,6 +55,7 @@
 
     </LinearLayout>
 
+    <!-- Checkbox de favorit -->
     <CheckBox
         android:id="@+id/chkFavorit"
         android:layout_width="wrap_content"
