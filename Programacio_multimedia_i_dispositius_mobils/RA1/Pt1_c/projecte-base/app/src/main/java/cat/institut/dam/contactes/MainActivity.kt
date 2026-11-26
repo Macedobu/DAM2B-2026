@@ -217,7 +217,7 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == REQUEST_NOTIFICACIONS) {
             val concedit = grantResults.isNotEmpty() &&
                 grantResults[0] == PackageManager.PERMISSION_GRANTED
-            if (!concedit) {
+            if (concedit) {
                 Notificacions.mostraContactesCarregats(this, darreraQuantitatCarregada)
             } else {
                 // TODO 6: avisa l'usuari que no es mostraran notificacions

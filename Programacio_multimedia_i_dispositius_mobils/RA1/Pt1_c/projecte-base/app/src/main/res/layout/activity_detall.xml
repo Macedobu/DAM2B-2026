@@ -1,6 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/arrelDetall"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Foto del contacte -->
+        <ImageView
+            android:id="@+id/ivFoto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_monograma"
+            android:contentDescription="@string/desc_foto"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_contacte" />
+
+        <!-- Nom del contacte -->
+        <TextView
+            android:id="@+id/tvNom"
+            style="@style/TextTitol"
+            android:layout_marginBottom="12dp"
+            android:gravity="center" />
+
+        <!-- Telèfon -->
+        <TextView
+            style="@style/TextCampEtiqueta"
+            android:text="@string/lbl_telefon" />
+
+        <TextView
+            android:id="@+id/tvTelefon"
+            style="@style/TextCamp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Correu -->
+        <TextView
+            style="@style/TextCampEtiqueta"
+            android:text="@string/lbl_email" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            style="@style/TextCamp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Adreça -->
+        <TextView
+            style="@style/TextCampEtiqueta"
+            android:text="@string/lbl_adreca" />
+
+        <TextView
+            android:id="@+id/tvAdreca"
+            style="@style/TextCamp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Web -->
+        <TextView
+            style="@style/TextCampEtiqueta"
+            android:text="@string/lbl_web" />
+
+        <TextView
+            android:id="@+id/tvWeb"
+            style="@style/TextCamp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Casella de Favorit -->
+        <CheckBox
+            android:id="@+id/chkFavorit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            android:text="@string/lbl_favorit"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp" />
+
+        <!-- Els 6 botons d'acció -->
+        <Button
+            android:id="@+id/btnTrucar"
+            style="@style/BotoContactes.Boto.Primary"
+            android:layout_marginBottom="8dp"
+            android:text="@string/btn_trucar" />
+
+        <Button
+            android:id="@+id/btnCorreu"
+            style="@style/BotoContactes.Boto.Container"
+            android:layout_marginBottom="8dp"
+            android:text="@string/btn_correu" />
+
+        <Button
+            android:id="@+id/btnMapa"
+            style="@style/BotoContactes.Boto.Container"
+            android:layout_marginBottom="8dp"
+            android:text="@string/btn_mapa" />
+
+        <Button
+            android:id="@+id/btnWeb"
+            style="@style/BotoContactes.Boto.Container"
+            android:layout_marginBottom="8dp"
+            android:text="@string/btn_web" />
+
+        <Button
+            android:id="@+id/btnAlarma"
+            style="@style/BotoContactes.Boto.Container"
+            android:layout_marginBottom="8dp"
+            android:text="@string/btn_alarma" />
+
+        <Button
+            android:id="@+id/btnGaleria"
+            style="@style/BotoContactes.Boto.Container"
+            android:layout_marginBottom="16dp"
+            android:text="@string/btn_galeria" />
+
+    </LinearLayout>
+</ScrollView>
